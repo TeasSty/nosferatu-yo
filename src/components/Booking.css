@@ -1,0 +1,113 @@
+.booking {
+  padding-block: var(--section);
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(122, 21, 24, 0.16), transparent 40%),
+    var(--bg);
+}
+
+.booking__layout {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+}
+
+.booking__intro {
+  display: grid;
+  gap: 1rem;
+}
+
+.booking__steps {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.booking__steps li {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.booking__steps strong {
+  font-family: var(--font-display);
+  color: var(--blood-bright);
+  letter-spacing: 0.08em;
+}
+
+.booking__steps span {
+  color: var(--bone-dim);
+}
+
+.booking__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.booking__mail {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--bone-mute);
+}
+
+.booking__mail a {
+  color: var(--bone-dim);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.booking__locations {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.loc-card {
+  padding: 1.25rem 1.1rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+}
+
+.loc-card h3 {
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 0.55rem;
+}
+
+.loc-card__addr,
+.loc-card__land,
+.loc-card__hours {
+  margin: 0 0 0.4rem;
+  color: var(--bone-dim);
+  font-size: 0.92rem;
+}
+
+.loc-card__hours {
+  color: var(--bone);
+  margin-bottom: 0.85rem;
+}
+
+.loc-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--bone-mute);
+  font-size: 0.86rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+@media (min-width: 900px) {
+  .booking__layout {
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1100px) {
+  .booking__locations {
+    grid-template-columns: 1fr;
+  }
+}

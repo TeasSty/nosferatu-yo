@@ -1,0 +1,65 @@
+.reviews {
+  padding-block: var(--section);
+}
+
+.reviews__head {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.reviews__track {
+  display: grid;
+  gap: 0.85rem;
+  width: min(100% - 2 * var(--space), 1280px);
+  margin-inline: auto;
+}
+
+.review-card {
+  margin: 0;
+  padding: 1.35rem 1.2rem;
+  background: var(--graphite);
+  border-left: 2px solid var(--blood);
+}
+
+.review-card p {
+  margin: 0 0 1rem;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.35;
+  color: var(--bone);
+}
+
+.review-card footer {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.review-card cite {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.review-card span {
+  font-size: 0.75rem;
+  color: var(--bone-mute);
+}
+
+@media (min-width: 900px) {
+  .reviews__track {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .review-card:nth-child(1),
+  .review-card:nth-child(2) {
+    grid-column: span 1;
+  }
+
+  .review-card:nth-child(4),
+  .review-card:nth-child(5),
+  .review-card:nth-child(6) {
+    grid-column: span 1;
+  }
+}
